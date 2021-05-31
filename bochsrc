@@ -1,0 +1,11 @@
+config_interface: textconfig
+romimage: file=/home/nadatamer/Desktop/bochs-20201125/bios/BIOS-bochs-latest
+vgaromimage: file=/usr/share/vgabios/vgabios.bin
+error: action=report
+memory: guest=8192, host=2048
+boot: disk
+ata0-master: type=disk, mode=flat, path="./images/myos.drv"
+cpu: count=1, ips=10000000
+cpuid: x86_64=1, #,apic=x2apic
+log:bochs.log
+magic_break: enabled=1
